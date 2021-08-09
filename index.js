@@ -4,66 +4,6 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const util = require('util');
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// Title
-// Description
-// Table of Contents
-// Installation 
-// Usage 
-// License List From Badges
-// Github Username
-// email address
-// Contributing
-// Tests
-// Questions
-
-// Popular Licenses
-// The following OSI-approved licenses are popular, widely used, or have strong communities:
-// Apache License 2.0
-// https://img.shields.io/badge/License-Apache%202.0-green.svg
-// BSD 3-Clause "New" or "Revised" license
-// https://img.shields.io/badge/License-BSD%203--Clause-orange.svg
-// BSD 2-Clause "Simplified" or "FreeBSD" license
-// https://img.shields.io/badge/License-BSD%202--Clause-orange.svg
-// GNU General Public License (GPL)
-// https://img.shields.io/badge/License-GPLv3-blue.svg
-// GNU Library or "Lesser" General Public License (LGPL)
-// https://img.shields.io/badge/License-LGPL%20v3-purple.svg
-// MIT license
-// https://img.shields.io/badge/License-MIT-yellow.svg
-// Mozilla Public License 2.0
-// https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg
-// Common Development and Distribution License
-// https://img.shields.io/badge/License-CDDL%201-lightgrey.svg
-// Eclipse Public License version 2.0
-// https://img.shields.io/badge/License-EPL%201.0-black.svg
-
-// https://img.shields.io/badge/License-${content.badge}-green
-
-
-// const badges = (badge) => {
-//     let img = "";
-//     switch (badge) {
-//         case "Apache License 2.0":
-//             img = `https://img.shields.io/badge/License-Apache%202.0-green.svg`
-//             break;
-//         case "BSD 3 Clause":
-//             img = `https://img.shields.io/badge/License-BSD%203--Clause-orange.svg`
-//             break;
-//         case "BSD 2 Clause":
-//             img = `https://img.shields.io/badge/License-BSD%202--Clause-orange.svg`
-//             break;
-//         case "GPL":
-//             img = `https://img.shields.io/badge/License-LGPL%20v3-purple.svg`
-//             break;
-//         case "MIT":
-//             img = `https://img.shields.io/badge/License-MIT-yellow.svg`
-//             break;
-//         case "MPL":
-//             img= ``
-
-//     }
-
-// }
 
 const questions = () => {
     return inquirer

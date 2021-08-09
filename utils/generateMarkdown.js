@@ -101,10 +101,9 @@ ${renderLicenseSection(data.license)}
     
 - [Description](#description)
 - [Installation](#installation)
-- [Technologies](#Technologies)
 - [Usage](#usage)
 - [Contribution](#contribution)
-- [Test Instructions](#test-instructions)
+- [Testing](#testing)
 - [Questions](#questions)
     
 ## Description
@@ -127,7 +126,7 @@ ${data.usage}
     
 ${data.contributing}
     
-## Tests
+## Testing
     
 ${data.tests}
     
@@ -135,7 +134,7 @@ ${data.tests}
     
 ${data.acknowledgments}
     
-## Questions?
+## Questions
     
 Please reach out to ${data.email} with any questions you may have
   
