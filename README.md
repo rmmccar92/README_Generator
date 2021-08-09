@@ -48,4 +48,7 @@ Please reach out to rmmccar92@gmail.com with any questions you may have
   
 [Github Profile](https://github.com/rmmccar92)
 
+## Demo
+![Demo gif](./media/demo.gif)
 
+[Video](https://drive.google.com/file/d/1mkU7o3A9_88Lss2r9nWtcg85vviHqM2r/view?usp=sharing)
