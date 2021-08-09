@@ -1,8 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 const util = require('util');
-
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // Title
@@ -122,7 +121,7 @@ const questions = () => {
                 type: 'list',
                 name: 'license',
                 message: 'Which license is your project using?',
-                choices: ['Apache_2.0', 'BSD_3-Clause', 'BSD_2-Clause', 'GPL_v3', 'LGPL_v3', 'MIT', 'MPL_2.0', 'CDDL_1', 'EPL_1.0', '']
+                choices: ['Apache 2.0', 'BSD 3-Clause', 'BSD 2-Clause', 'GPL v3', 'LGPL v3', 'MIT', 'MPL 2.0', 'CDDL 1', 'EPL 1.0', '']
             },
 
             {
@@ -140,61 +139,10 @@ const questions = () => {
         ])
 }
 
-const generateREADME = (data) =>
-`# ${data.title}
-
-![badge](<https://img.shields.io/badge/License-${data.license}-green>)
-  
-## Table of Contents
-  
-- [Description](#description)
-- [Installation](#installation)
-- [Technologies](#Technologies)
-- [Usage](#usage)
-- [Contribution](#contribution)
-- [Test Instructions](#test-instructions)
-- [Questions](#questions)
-  
-## Description
-  
-${data.description}
-  
-## Authors
-  
-${data.authors}
-  
-## Installation
-  
-${data.installation}
-  
-## Usage
-  
-${data.usage}
-  
-## Contributing
-  
-${data.contributing}
-  
-## Tests
-  
-${data.tests}
-  
-## Special Thanks and Acknowledgments
-  
-${data.acknowledgments}
-  
-## Questions?
-  
-Please reach out to ${data.email} with any questions you may have
-
-[Github Profile](https://github.com/${data.username}\n)
-
-`
-
 
 const init = () => {
     questions()
-        .then((data) => writeFileAsync('README.md', generateREADME(data)))
+        .then((data) => writeFileAsync('README.md', generateMarkdown(data)))
         .then(() => console.log('README generated'))
         .catch((err) => console.log(err))
 }
